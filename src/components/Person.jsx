@@ -7,6 +7,7 @@ const Person = (props) => {
         return (
           <Link to={`/data/${el.id}`} key={el.id}>
             <div className="input">
+              <h5>#{el.id}</h5>
               <h5>{el.first_name}</h5>
               <h5>{el.last_name}</h5>
               <h5>{el.email}</h5>

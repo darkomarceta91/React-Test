@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Link, redirect, useNavigate } from "react-router-dom";
-
-const CreateForm = (props) => {
+import { useNavigate } from "react-router-dom";
+import Header from "./Header";
+const CreateForm = () => {
   const [data, setData] = useState({
     first_name: "",
     last_name: "",
@@ -32,88 +32,91 @@ const CreateForm = (props) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     }).then(() => {
-      navigate("/");
+      navigate("/home");
     });
   };
   return (
-    <form id="myForm">
-      <div className="firstNameContainer">
-        <input
-          onChange={inputListener}
-          className="inputField"
-          type="text"
-          id="first_name"
-          name="first_name"
-          placeholder="First Name"
-          value={data.first_name}
-          required
-        ></input>
-      </div>
-      <div className="lastNameContainer">
-        <input
-          onChange={inputListener}
-          className="inputField"
-          type="text"
-          id="last_name"
-          name="last_name"
-          placeholder="Last Name"
-          value={data.last_name}
-          required
-        ></input>
-      </div>
-      <div className="emailContainer">
-        <input
-          onChange={inputListener}
-          className="inputField"
-          type="email"
-          id="email"
-          name="email"
-          value={data.email}
-          placeholder="Email"
-          required
-        ></input>
-      </div>
-
-      <div className="genderContainer">
-        <div className="male">
+    <div>
+      <Header></Header>
+      <form id="myForm">
+        <div className="firstNameContainer">
           <input
             onChange={inputListener}
-            type="radio"
-            id="male"
-            name="gender"
-            value="male"
+            className="inputField"
+            type="text"
+            id="first_name"
+            name="first_name"
+            placeholder="First Name"
+            value={data.first_name}
+            required
           ></input>
-          <p>Male</p>
         </div>
-        <div className="female">
+        <div className="lastNameContainer">
           <input
             onChange={inputListener}
-            type="radio"
-            id="female"
-            name="gender"
-            value="female"
+            className="inputField"
+            type="text"
+            id="last_name"
+            name="last_name"
+            placeholder="Last Name"
+            value={data.last_name}
+            required
           ></input>
-          <p>Female</p>
         </div>
-      </div>
+        <div className="emailContainer">
+          <input
+            onChange={inputListener}
+            className="inputField"
+            type="email"
+            id="email"
+            name="email"
+            value={data.email}
+            placeholder="Email"
+            required
+          ></input>
+        </div>
 
-      <textarea
-        onChange={inputListener}
-        id="ip_address"
-        name="ip_address"
-        placeholder="ip_address"
-        value={data.ip_address}
-        rows="4"
-        cols="20"
-      ></textarea>
-      <input
-        className="submitButton"
-        type="submit"
-        value="Submit"
-        onClick={submitHandler}
-        required
-      ></input>
-    </form>
+        <div className="genderContainer">
+          <div className="male">
+            <input
+              onChange={inputListener}
+              type="radio"
+              id="male"
+              name="gender"
+              value="male"
+            ></input>
+            <p>Male</p>
+          </div>
+          <div className="female">
+            <input
+              onChange={inputListener}
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+            ></input>
+            <p>Female</p>
+          </div>
+        </div>
+
+        <textarea
+          onChange={inputListener}
+          id="ip_address"
+          name="ip_address"
+          placeholder="ip_address"
+          value={data.ip_address}
+          rows="4"
+          cols="20"
+        ></textarea>
+        <input
+          className="submitButton"
+          type="submit"
+          value="Submit"
+          onClick={submitHandler}
+          required
+        ></input>
+      </form>
+    </div>
   );
 };
 

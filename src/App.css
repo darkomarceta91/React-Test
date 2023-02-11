@@ -9,7 +9,7 @@
 }
 .body {
   background-color: #fffbf5;
-  height: 100vh;
+  height: 110vh;
 }
 *:focus {
   outline: none;
@@ -141,6 +141,21 @@ textArea {
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
   padding: 0.5rem;
+  margin: 0.5rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2.5fr 1.3fr 2fr;
+  gap: 0.7rem;
+  justify-content: left;
+  padding-left: 3.5rem;
+  align-items: center;
+}
+.topNavigation button {
+  color: #f7efe5;
+  text-align: left;
+  background: none;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
 }
 .searchNav {
   width: 500px;
@@ -185,14 +200,16 @@ textArea {
     rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
   margin: 0.5rem 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 2.5fr 1.3fr 2fr;
+  grid-template-columns: 0.3fr 1fr 1fr 2.5fr 1.3fr 2fr;
   gap: 1rem;
   justify-content: left;
-  padding-left: 2rem;
+  padding-left: 0.5rem;
   align-items: center;
   color: rgb(68, 68, 68);
 }
-
+.input :nth-child(1) {
+  text-align: right;
+}
 .personContainer a {
   text-decoration: none;
 }
@@ -255,46 +272,7 @@ textArea {
   position: absolute;
   top: 0;
 }
-/* .labels h4:nth-child(1) {
-  position: absolute;
-  top: 29%;
-  left: 42%;
-  background-color: #f7efe5;
-  padding: 0 1rem;
-}
-.labels h4:nth-child(2) {
-  position: absolute;
-  top: 42%;
-  left: 41.8%;
-  background-color: #f7efe5;
-  padding: 0 1rem;
-}
-.labels h4:nth-child(3) {
-  position: absolute;
-  top: 55%;
-  left: 44.1%;
-  background-color: #f7efe5;
-  padding: 0 1rem;
-}
-.labels h4:nth-child(4) {
-  position: absolute;
-  top: 68%;
-  left: 40.8%;
-  background-color: #f7efe5;
-  padding: 0 1rem;
-}
-.labels h4:nth-child(5) {
-  position: absolute;
-  top: 81%;
-  left: 43%;
-  background-color: #f7efe5;
-  padding: 0 1rem;
-}
-.labels h4 {
-  font-size: 12px;
-  font-weight: 600;
-  color: rgb(148, 146, 146);
-} */
+
 .individualContainer {
   position: relative;
   display: grid;
@@ -343,5 +321,8 @@ textArea {
   padding: 20px;
   box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
     rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-  margin-top: 5rem;
+}
+.loginPageBody {
+  background-color: #fffbf5;
+  padding-top: 10rem;
 }

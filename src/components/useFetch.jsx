@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-const useFetch = (url) => {
+const useFetch = (url, _buttonName, _searchText) => {
   const [data, setData] = useState(null);
   useEffect(() => {
-    fetch(url)
+    fetch(`${url}`)
       .then((res) => {
         return res.json();
       })

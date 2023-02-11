@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import Header from "./Header";
 import useFetch from "./useFetch";
 
 const IndividualData = () => {
@@ -11,11 +12,12 @@ const IndividualData = () => {
     fetch("http://localhost:8000/data/" + [id], {
       method: "DELETE",
     }).then(() => {
-      navigate("/");
+      navigate("/home");
     });
   };
   return (
     <div>
+      <Header></Header>
       {data && (
         <div className="individualContainer">
           <div className="individualData">
