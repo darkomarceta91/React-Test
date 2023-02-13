@@ -58,7 +58,9 @@
 }
 
 .homeButton:hover,
-.createEntryButton:hover {
+.createEntryButton:hover,
+.searchButton:hover,
+.resetButton:hover {
   background-color: rgba(19, 18, 18, 0.527);
   color: #fff;
 }
@@ -158,7 +160,7 @@ textArea {
   cursor: pointer;
 }
 .searchNav {
-  width: 500px;
+  width: 700px;
   height: 70px;
   background-color: #f7efe5;
   margin: auto;
@@ -174,13 +176,22 @@ textArea {
 .searchNav input {
   border-radius: 20px;
   padding: 0.6rem;
-  width: 450px;
+  width: 400px;
   border: 1px solid black;
   margin-right: 1rem;
   margin-left: 1rem;
   padding-left: 1rem;
   font-size: 16px;
   border: none;
+}
+.searchNav button {
+  margin: 1rem 0.3rem;
+  width: 100px;
+  height: 50%;
+  border-radius: 20px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
 }
 
 .allInputs {
